@@ -1,0 +1,16 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "route",
+	"routes": [{
+		"source": "/portapp/port/(.*)",
+		"destination": "node_api",
+		"target": "/port/$1" 
+	}, {
+		"source": "^/portapp/index.html/(.*)$",
+		"target": "$1",
+		"localDir": "resources",
+		"replace": {
+			"pathSuffixes": ["index.html"]
+		} 
+	}]
+}
