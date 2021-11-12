@@ -46,4 +46,4 @@ resources:
     parameters:
       service-name: port_test_app-uaa
       service-plan: space
-     #path: xs-security.json
+      path: xs-security.json
