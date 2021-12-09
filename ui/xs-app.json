@@ -5,7 +5,7 @@
 		"source": "/portapp/port/(.*)",
 		"destination": "node_api",
 		"target": "/port/$1",
-		"scope": "$XSAPPNAME.view"
+		"authenticationType": "xsuaa"
 	}, {
 		"source": "^/portapp/index.html/(.*)$",
 		"target": "$1",
@@ -13,6 +13,9 @@
 		"replace": {
 			"pathSuffixes": ["index.html"]
 		},
-		"scope": "$XSAPPNAME.view"
-	}]
+		"authenticationType": "xsuaa"
+	}],
+	"login": {
+		"callbackEndpoint": "/login/callback"
+	}
 }
